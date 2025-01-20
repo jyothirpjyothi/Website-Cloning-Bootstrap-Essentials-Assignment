@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="BusinessTycoon.css" />
+    <style>
+      div[id^="section"] {
+        display: none; /* Hide all sections by default */
+      }
+      #sectionHome {
+        display: block; /* Show the home section initially */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sectionHome">
+      <div class="bg-container d-flex flex-column justify-content-end">
+        <div class="business-card">
+          <h1 class="main-heading">Business Tycoons</h1>
+          <p class="paragraph">About the tycoons.</p>
+          <button class="button" onclick="display('sectionBusinessTycoons')">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="sectionBusinessTycoons">
+      <div class="business-tycoons-bg-container">
+        <h1 class="business-tycoons-heading">Business Tycoons</h1>
+        <div
+          class="business-tycoon-card-container d-flex flex-row"
+          onclick="display('sectionJeffBezonDetailedView')"
+        >
+          <div>
+            <h1 class="business-tycoon-card-heading">Jeff Bezon</h1>
+            <p class="business-tycoon-card-description">
+                Jeffrey Preston Bezos is an American businessman best known as the founder, executive chairman,
+                and former president and CEO of Amazon, the world's largest e-commerce and cloud computing company.
+            </p>
+          </div>
+          <img
+            src="https://variety.com/wp-content/uploads/2024/12/Jeff-Bezos.jpg"
+            class="business-tycoon-card-image"
+          />
+        </div>
+        <div
+          class="business-tycoon-card-container d-flex flex-row"
+          onclick="display('sectionMarkZuckerbergDetailedView')"
+        >
+          <div>
+            <h1 class="business-tycoon-card-heading">Mark Zuckerberg</h1>
+            <p class="business-tycoon-card-description">
+              Mark Elliot Zuckerberg is an American businessman who co-founded the social media service Facebook and its 
+              parent company Meta Platforms, of which he is the chairman, chief executive officer, and controlling shareholder.
+            </p>
+          </div>
+          <img
+            src="https://imageio.forbes.com/specials-images/imageserve/67852ff514da7160109b7fd5/Key-Speakers-At-The-Meta-Connect-Event/960x0.jpg?format=jpg&width=960"
+            class="business-tycoon-card-image"
+          />
+        </div>
+        <div class="business-tycoon-card-container d-flex flex-row" 
+            onclick="display('sectionBernardArnaultDetailedView')">
+          <div>
+            <h1 class="business-tycoon-card-heading">Bernard Arnault</h1>
+            <p class="business-tycoon-card-description">
+              Bernard Jean Étienne Arnault is a French businessman, investor and art collector. 
+              He is the founder, chairman and CEO of LVMH, the world's largest luxury goods company.
+            </p>
+          </div>
+          <img
+            src="https://media.voguebusiness.com/photos/6231f20617534f5d53db299e/2:3/w_2560%2Cc_limit/bernard-arnault-voguebus-full-getty-credit-mar-22-story.jpg"           
+            class="business-tycoon-card-image"
+          />
+        </div>
+        <div class="business-tycoon-card-container d-flex flex-row" 
+             onclick="display('sectionMukeshAmbaniDetailedView')">
+          <div>
+            <h1 class="business-tycoon-card-heading">Mukesh Ambani</h1>
+            <p class="business-tycoon-card-description">
+              Mukesh Dhirubhai Ambani is an Indian billionaire and businessman who is the chairman and managing
+              director of Reliance Industries. He is the richest person in Asia and 9th richest in the world.
+            </p>
+          </div>
+          <img
+            src="https://assets.weforum.org/sf_account/image/qC7Y5hfYRDNBfHqOpJQFLicYUd4cfJf-ySqS2Yj8Sg0.jpg"
+            class="business-tycoon-card-image"
+          />
+        </div>
+        <button class="btn btn-dark" onclick="display('sectionHome')">Back</button>
+      </div>
+    </div>
+
+    <div id="sectionJeffBezonDetailedView">
+      <div class="detailed-view-bg-container">
+        <h1 class="detailed-view-heading">Detailed View</h1>
+        <div class="detailed-view-card-container">
+          <div id="jeffBezonCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li
+                data-target="#jeffBezonCarousel"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#jeffBezonCarousel" data-slide-to="1"></li>
+              <li data-target="#jeffBezonCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://hips.hearstapps.com/hmg-prod/images/jeff-bezos-attends-the-lord-of-the-rings-the-rings-of-power-news-photo-1684851576.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://fortune.com/img-assets/wp-content/uploads/2015/06/gettyimages-450831302.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Jeff_Bezos%27_iconic_laugh.jpg/1776px-Jeff_Bezos%27_iconic_laugh.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#jeffBezonCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#jeffBezonCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="detailed-view-card-text-container">
+              <h1 class="detailed-view-card-heading">Jeff Bezon</h1>
+              <p class="detailed-view-card-description">
+                Jeffrey Preston Bezos is an American businessman best known as the founder, executive chairman, and 
+                former president and CEO of Amazon, the world's largest e-commerce and cloud computing company.</br> 
+                Born: 12 January 1964 (age 61 years), Albuquerque, New Mexico, United States.</br> 
+                Net worth: 23,940 crores USD (2025) Forbes.</br> 
+                Partner: Lauren Sánchez.</br> 
+                Spouse: MacKenzie Scott (m. 1993–2019).</br> 
+                Organizations founded: Amazon.com, Blue Origin, Bezos Earth Fund, Kuiper Systems, Bezos Expeditions.</br> 
+                Children: Preston Bezos.</br> 
+                Education: Princeton University (1982–1986), Miami Palmetto Senior High School (1982), River Oaks Elementary School.
+
+              </p>
+            </div>
+          </div>
+          <button class="btn btn-dark" onclick="display('sectionBusinessTycoons')">
+            Back
+          </button>
+        </div>
+      </div>
+  
+      <div id="sectionMarkZuckerbergDetailedView">
+        <div class="detailed-view-bg-container">
+          <h1 class="detailed-view-heading">Detailed View</h1>
+          <div class="detailed-view-card-container">
+            <div id="markzuckerbergCarousel" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#markzuckerbergCarousel"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li data-target="#markzuckerbergCarousel" data-slide-to="1"></li>
+                <li data-target="#markzuckerbergCarousel" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://cdn.britannica.com/54/187354-050-BE0530AF/Facebook-Founder-CEO-Mark-Zuckerberg-email-messaging-system-St-Regis.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://www.telegraph.co.uk/multimedia/archive/02587/zuckerberg_2587413b.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://cdn.jornaldenegocios.pt/images/2018-03/img_440x274$2018_03_12_11_25_00_327822.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#markzuckerbergCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#markzuckerbergCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="detailed-view-card-text-container">
+              <h1 class="detailed-view-card-heading">Mark Zuckerberg</h1>
+              <p class="detailed-view-card-description">
+                Mark Elliot Zuckerberg is an American businessman who co-founded the social media service Facebook and its parent company
+                Meta Platforms, of which he is the chairman, chief executive officer, and controlling shareholder.</br>
+                Born: 14 May 1984 (age 40 years), White Plains, New York, United States.</br>
+                Net worth: 21,130 crores USD (2025) Forbes.</br>
+                Spouse: Priscilla Chan (m. 2012).</br>
+                Education: Harvard University (2002–2004), Phillips Exeter Academy (2000–2002), Ardsley High School (1998–2000).</br>
+                Height: 1.71 m.</br>
+                Parents: Edward Zuckerberg, Karen Kempner.</br>
+
+            
+              </p>
+            </div>
+          </div>
+          <button class="btn btn-dark" onclick="display('sectionBusinessTycoons')">
+            Back
+        </button>
+    </div>
+  </div>
+
+  <div id="sectionBernardArnaultDetailedView">
+    <div class="detailed-view-bg-container">
+      <h1 class="detailed-view-heading">Detailed View</h1>
+      <div class="detailed-view-card-container">
+        <div>
+          <iframe width="875" height="492" src="https://www.youtube.com/embed/0gTJXPRy5AM" title="Bernard Arnault&#39;s Billionaire Lifestyle | Net Worth, Car Collection, Mansion, Yacht, ..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>>
+        <div class="detailed-view-card-text-container">
+        <h1 class="detailed-view-card-heading">Bernard Arnault</h1>
+        <p class="detailed-view-card-description">
+          Bernard Jean Étienne Arnault is a French businessman, investor and art collector. He is the founder,
+          chairman and CEO of LVMH, the world's largest luxury goods company.</br>
+          Born: 5 March 1949 (age 75 years), Roubaix, France.</br>
+          Net worth: 18,160 crores USD (2025) Forbes.</br>
+          Children: Frédéric Arnault, Antoine Arnault, Delphine Arnault, Alexandre Arnault, Jean Arnault.</br>
+          Spouse: Hélène Mercier-Arnault (m. 1991), Anne Dewavrin (m. 1973–1990).</br>
+          Education: École Polytechnique (1969–1971), Lycée Faidherbe.</br>
+          Organizations founded: Groupe Arnault, Europ@web.</br>
+          Siblings: Dominique Watine-Arnault.</br>
+          </p>
+        </div>
+      </div>
+      <button class="btn btn-dark" onclick="display('sectionBusinessTycoons')">
+        Back
+      </button>
+    </div>
+  </div>
+
+  <div id="sectionMukeshAmbaniDetailedView">
+    <div class="detailed-view-bg-container">
+      <h1 class="detailed-view-heading">Detailed View</h1>
+      <div class="detailed-view-card-container">
+        <div id="mukeshAmbaniCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li
+             data-target="#mukeshAmbaniCarousel"
+             data-slide-to="0"
+             class="active"
+          ></li>
+          <li data-target="#mukeshAmbaniCarousel" data-slide-to="1"></li>
+          <li data-target="#msukeshAmbaniCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://indiathedestiny.com/wp-content/uploads/2016/06/MUKESH_AMBANI-636.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://static.openthemagazine.com/fit-in/713x475/filters:quality(80)/wp-content/uploads/2018/07/MukeshAmbani1.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://sugermint.com/wp-content/uploads/2020/06/Mukesh-Ambani.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#mukeshAmbaniCarousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#mukeshAmbaniCarousel"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="detailed-view-card-text-container">
+      <h1 class="detailed-view-card-heading">Mukesh Ambani</h1>
+      <p class="detailed-view-card-description">
+        Mukesh Dhirubhai Ambani is an Indian billionaire and businessman who is the chairman and managing director
+        of Reliance Industries. He is the richest person in Asia and 9th richest in the world.</br>
+        Born: 19 April 1957 (age 67 years), Aden, Yemen.</br>
+        Net worth: 9,810 crores USD (2025) Forbes.</br>
+        Children: Anant Ambani, Isha Ambani, Akash Ambani.</br>
+        Spouse: Nita Ambani (m. 1985).</br>
+        Parents: Dhirubhai Ambani, Kokilaben Ambani.</br>
+        Education: Hill Grange High School.</br>
+        Siblings: Anil Ambani, Nina Kothari, Deepti Salgaocar.</br>
+      </p>
+    </div>
+  </div>
+  <button class="btn btn-dark" onclick="display('sectionBusinessTycoons')">
+    Back
+  </button>
+</div>
+</div>
+
+<script>
+function display(sectionId) {
+  const sections = document.querySelectorAll("div[id^='section']");
+  sections.forEach((section) => {
+    section.style.display = "none";
+  });
+  const selectedSection = document.getElementById(sectionId);
+  if (selectedSection) {
+    selectedSection.style.display = "block";
+  }
+}
+
+document.addEventListener("DOMContentLoaded",() => 
+{
+  display("sectionHome");
+});
+</script>
+</body>
+</html>
